@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+   <br>
+ 
+<div class="container-fluid  mx-auto" style="width: 1200px; ">
+
+
+    <h3 class="text-primary".text-danger >DETALHES DE: {{ pessoa.nome }} [  MATRÍCULA - <b>{{ pessoa.id }}</b>  ]</h3>
+
+    <hr>
+
+  
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nome: </th>
+      <th scope="col">{{ pessoa.nome }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">CPF:</th>
+      <td>{{ pessoa.cpf }}</td>
+    </tr>
+    <tr>
+      <th scope="row">E-mail:</th>
+      <td>{{ pessoa.email }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Telefone(Whatsapp):</th>
+      <td>{{ pessoa.fone }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Cidade:</th>
+      <td>{{ pessoa.cidade }}</td>
+    </tr>
+    <tr>
+      <th scope="row">UF - Unidade da Federação:</th>
+      <td>{{ pessoa.uf }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Curso:</th>
+      <td>{{ pessoa.curso }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Turma:</th>
+      <td>{{ pessoa.turma }}</td>
+    </tr>    
+  </tbody>
+</table>
+
+</div>
+
+
+{% endblock %}

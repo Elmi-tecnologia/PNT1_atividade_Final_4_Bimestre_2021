@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     {% if title %}
+        <title>{{ title }}</title>
+     {% else %}
+        <title>ETEPD</title>
+     {% endif %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+
+</head>
+<body>
+  <div class="container-fluid">
+    <br>
+
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link active" href="/">ESCOLA DO FUTURO NOW</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/listar">Listar alunos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/inserir">Adicionar Aluno</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Missão</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Visão</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Valores</a>
+  </li>
+</ul>
+
+<HR>
+<center><H3>Escola Futuro Now</H3></center>
+
+{% block content %} {% endblock %}
+
+<br>
+<br>
+<div class="container-fluid bg-primary text-white">
+  <div class="row">
+    <div class="col">
+     <br>
+     FALE CONOSCO: <b>(81)3454-5654  / secretaria@efw.edu.br</b>
+
+     <br>
+     <br>
+    </div>
+    <div class="col">
+      <br>
+       <a href='https://web.telegram.org/k/'>| <img src="{{ url_for('static', filename = 'logo_telegram.png') }}" alt="Telegram" width=100 height=30> | </a>
+       <a href='https://web.whatsapp.com/'>| <img src="{{ url_for('static', filename = 'logo_whatsapp.png') }}" alt="Whatsapp" width=100 height=30> | </a>
+       <a href='#'>| <img src="{{ url_for('static', filename = 'logo_email.jpeg') }}" alt="Twitter" width=100 height=30> | </a>
+    <br>
+    <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <a href='https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D'>| <img src="{{ url_for('static', filename = 'logo_twitter.png') }}" alt="Twitter" width=100 height=30> | </a>
+     </div>
+    <div class="col">
+       <a href='https://www.instagram.com/accounts/login/?next=/explore/%3Fgclid%3DEAIaIQobChMI4N-Qrvma9AIVHAutBh2oUAT4EAAYASAAEgKv_PD_BwE'>| <img src="{{ url_for('static', filename = 'logo_instagram.png') }}" alt="Instagram" width=100 height=30> | </a>
+    </div>
+    <div class="col">
+       <a href='https://www.linkedin.com/login/pt?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin'>| <img src="{{ url_for('static', filename = 'logo_linkedin.png') }}" alt="Twitter" width=100 height=30> | </a>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+
+</div>
+
+
+
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

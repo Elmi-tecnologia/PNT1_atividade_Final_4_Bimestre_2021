@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+ 
+<div class="container-fluid  mx-auto" style="width: 1200px; ">
+
+
+    <h3 class="text-primary".text-danger >RELAÇÃO DE ESTUDANTES</h3>
+
+    <hr>
+
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Matrícula</th>
+      <th scope="col">Nome</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Curso</th>
+      <th scope="col">Turma</th>
+      <th scope="col">Ações</th>      
+    </tr>
+  </thead>
+  <tbody>
+    {% for linha in pessoas %}
+    <tr>
+      <th scope="row">{{ linha.id }}</th>
+      <td>{{ linha.nome }}</td>
+      <td>{{ linha.email }}</td>
+      <td>{{ linha.curso }}</td>
+      <td>{{ linha.turma }}</td>
+      <td>
+        <a href='/detalhar?id={{ linha.id }}'>| <img src="{{ url_for('static', filename = 'detalhes.jpeg') }}" alt="Excluir" width=30 height=20> | </a>
+        <a href='/editar?id={{ linha.id }}'><img src="{{ url_for('static', filename = 'editar.jpeg') }}" alt="Excluir" width=30 height=20> | </a>
+        <a href='/excluir?id={{ linha.id }}'><img src="{{ url_for('static', filename = 'Lixeira2.jpeg') }}" alt="Excluir" width=30 height=20> | </a>
+      </td>
+    </tr>
+    {% endfor %}
+<br>
+
+  </tbody>
+</table>
+<BR>
+  <center><a href="/inserir" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">ADICIONAR NOVO ESTUDANTE</a></center>
+
+
+</div>
+
+{% endblock %}

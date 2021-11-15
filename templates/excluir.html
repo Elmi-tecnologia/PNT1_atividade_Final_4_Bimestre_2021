@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container-fluid  mx-auto" style="width: 400px; ">
+
+
+    <h3 class="text-danger".text-danger >Confirmação de Exclusão!</h3>
+
+
+
+
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ url_for('static', filename = 'Excluir.jpeg') }}"  alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-title">{{ pessoa.nome }}</h4>
+    <p class="card-text">
+
+<form action="{{ url_for('excluir') }}" method=post>
+  <p>Você realmente deseja excluir <b>{{ pessoa.nome }}?</b> </p>
+  <button type="submit" class="btn btn-danger">Sim,  pode Excluir</button>
+  <br>
+  <br>
+  <a href="/listar" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">NÃO, FOI ENGANO.</a>
+
+ 
+</form>
+
+
+
+    </p>
+   
+  </div>
+</div>
+
+
+  </div>
+
+
+{% endblock %}
