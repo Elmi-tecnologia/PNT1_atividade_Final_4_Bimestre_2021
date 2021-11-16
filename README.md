@@ -11,4 +11,4 @@ app.py - arquivo que contém toda a lógica da aplicação e a comunicação com
 
 Por estarmos usando o sqlite há um arquivo que contém os dados e os metadados do banco de dados.
 
-há ainda um arquivo chamado requirements.txt, que contém as dependências do projeto.
+há ainda um arquivo chamado requirements.txt, que contém as dependências do projeto.(pip install -r requirements.txt)
